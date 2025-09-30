@@ -196,7 +196,7 @@ def main(args=None):
             parser.error("No password supplied")
 
         try:
-            api = PyiCloudService(username.strip(), password.strip())
+            api = PyiCloudService(username.strip(), password.strip(), china_mainland=china_mainland)
             if (
                 not utils.password_exists_in_keyring(username)
                 and command_line.interactive
